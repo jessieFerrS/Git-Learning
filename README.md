@@ -43,47 +43,47 @@ ERROR: REMOTE ORIGIN ALREADY EXISTS!
 **git push -u origin main**
 ```
 
-  6.1. Caso surja algum erro quando executar os comandos 5 e 6, do tipo: 
+6.1. Caso surja algum erro quando executar os comandos 5 e 6, do tipo: 
 
-  ```
-  ! [rejected]   main -> main (fetch first)
-  error: failed to push some refs to 'URL DO REPOSITORIO'
-  hint: Updates were rejected because the remote contains work that you do not
-  hint: have locally. This is usually caused by another repository pushing to
-  hint: the same ref. If you want to integrate the remote changes, 
-  use
-  hint: 'git pull' before pushing again.
-  hint: See the 'Note about fast-forwards' in 'git push --help' for details
-  ```
+```
+! [rejected]   main -> main (fetch first)
+error: failed to push some refs to 'URL DO REPOSITORIO'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, 
+use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details
+```
 
-  Fazer os seguintes passos para resolver:
+Fazer os seguintes passos para resolver:
 
-  6.2. Faça um Pull para baixar as mudanças do repositório remoto:
+6.2. Faça um Pull para baixar as mudanças do repositório remoto:
 
-  ```
-  **git pull origin main --allow-unrelated-histories**
-  // o parametro **--allow-unrelated-histories** é necessário se o repositório local
-  e o remoto tiverem historicos diferente, é comum quando se inicia o repositorio local
-  e remoto separadamente.
-  ```
+```
+**git pull origin main --allow-unrelated-histories**
+// o parametro **--allow-unrelated-histories** é necessário se o repositório local
+ e o remoto tiverem historicos diferente, é comum quando se inicia o repositorio local
+ e remoto separadamente.
+```
 
-  6.3. Depois é só adicionar os arquivos modificados:
+6.3. Depois é só adicionar os arquivos modificados:
 
-  ```
-  **git add .**
-  ```
+```
+**git add .**
+```
 
-  6.4 Faça um commit para confirmar a mesclagem:
+6.4 Faça um commit para confirmar a mesclagem:
 
-  ```
-  **git commit -m** "Resolvendo conflitos e mesclando com o repositório remoto"
-  ```
+```
+**git commit -m** "Resolvendo conflitos e mesclando com o repositório remoto"
+```
 
-  6.5 Agora é só enviar as alterações para o repositório remoto
+6.5 Agora é só enviar as alterações para o repositório remoto
 
-  ```
-  **git push origin main**
-  ```
+```
+**git push origin main**
+```
 
 7. Renomeando uma branch caso necessário:
 
